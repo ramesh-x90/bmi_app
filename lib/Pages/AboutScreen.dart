@@ -2,6 +2,7 @@ import 'package:bmi_app/common/BmiCategoryItem.dart';
 import 'package:bmi_app/components/BmiCategoryItemCard.dart';
 import 'package:flutter/material.dart';
 
+/// A widget that displays common BMI information.
 class CommonBMIInfo extends StatelessWidget {
   const CommonBMIInfo({super.key});
 
@@ -45,6 +46,11 @@ class CommonBMIInfo extends StatelessWidget {
     );
   }
 
+  /// Builds a widget for displaying a BMI category item.
+  ///
+  /// The [category] parameter represents the category name.
+  /// The [range] parameter represents the range of the category.
+  /// The [color] parameter represents the text color of the category.
   Widget buildBMICategoryItem(String category, String range, Color color) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4.0),

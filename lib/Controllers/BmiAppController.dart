@@ -3,6 +3,7 @@ import 'package:bmi_app/util/BmiUtil.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// Controller class for the BMI App.
 class BmiAppController extends GetxController {
   var selectedIndex = 0.obs;
   var bmi = (-1.0).obs;
@@ -12,6 +13,10 @@ class BmiAppController extends GetxController {
   final TextEditingController weightController = TextEditingController();
   final TextEditingController heightController = TextEditingController();
 
+  /// Changes the selected index.
+  ///
+  /// If the index is 1 and the BMI value is less than or equal to 0.0,
+  /// a snackbar is displayed indicating that the BMI needs to be calculated first.
   void changeIndex(int index) {
     if (index == 1 && bmi.value <= 0.0) {
       Get.snackbar(
@@ -24,6 +29,9 @@ class BmiAppController extends GetxController {
     selectedIndex.value = index;
   }
 
+  /// Filters characters in the text field to allow only numbers and a decimal point.
+  ///
+  /// This method is used as a listener for the weight and height text fields.
   void filterCharacters(TextEditingController controller) {
     final text = controller.text;
     var filteredText = text.replaceAll(RegExp(r'[^0-9\.]'), '');
@@ -47,15 +55,23 @@ class BmiAppController extends GetxController {
     }
   }
 
+  /// Checks if the form is valid.
+  ///
+  /// Returns true if there are no errors, false otherwise.
   bool isFormValid() {
     return error.value.isEmpty;
   }
 
+  /// Clears the input fields.
   void clearInputs() {
     weightController.clear();
     heightController.clear();
   }
 
+  /// Calculates the BMI.
+  ///
+  /// Parses the weight and height from the input fields and calculates the BMI value.
+  /// Displays an error snackbar if the input is invalid.
   void calculateBMI() {
     try {
       double height = double.parse(heightController.text);
@@ -109,6 +125,7 @@ class BmiAppController extends GetxController {
     super.onClose();
   }
 
+  /// Returns the current BMI category.
   String getCategory() {
     return bmiCategory.value;
   }

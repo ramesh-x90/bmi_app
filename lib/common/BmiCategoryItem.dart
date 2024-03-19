@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
+/// Represents a BMI category item.
 class BMICategoryItem {
   final String category;
   final String range;
   final Color color;
   final Color backgroundColor;
 
+  /// Constructs a [BMICategoryItem] with the given properties.
   BMICategoryItem({
     required this.category,
     required this.range,
@@ -13,6 +15,7 @@ class BMICategoryItem {
     required this.backgroundColor,
   });
 
+  /// A list of predefined [BMICategoryItem] objects.
   static final List<BMICategoryItem> bmiItems = [
     BMICategoryItem(
       category: 'Severe undernourishment',

@@ -1,3 +1,7 @@
+/**
+ * BMI Categories
+ */
+
 class BMI_CATECORIES {
   static const String SEVERE_UNDERNOURISHMENT = "Severe undernourishment";
   static const String MEDIUM_UNDERNOURISHMENT = "Medium undernourishment";

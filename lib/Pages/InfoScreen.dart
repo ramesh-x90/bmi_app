@@ -3,6 +3,10 @@ import 'package:bmi_app/util/BmiUtil.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// This is the InformationScreen class.
+/// It is a StatelessWidget that displays the user's BMI information.
+/// The class takes a [bmi] parameter, which represents the user's BMI value.
+/// It also uses the [BmiAppController] to get the BMI category.
 class InformationScreen extends StatelessWidget {
   final double bmi;
   final BmiAppController controller = Get.find();

@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 
+/// A card widget that displays the BMI category and its range.
 class BMICategoryItemCard extends StatelessWidget {
   final String category;
   final String range;
   final Color textColor;
   final Color backgroundColor;
 
-  const BMICategoryItemCard(
-      {super.key,
-      required this.category,
-      required this.range,
-      required this.textColor,
-      required this.backgroundColor});
+  /// Constructs a [BMICategoryItemCard] with the given parameters.
+  const BMICategoryItemCard({
+    Key? key,
+    required this.category,
+    required this.range,
+    required this.textColor,
+    required this.backgroundColor,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

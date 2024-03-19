@@ -3,9 +3,13 @@ import 'package:bmi_app/components/BmiTextInput.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// A widget that represents the height input field in the BMI app.
 class HeightInputField extends StatelessWidget {
   final BmiAppController bmiAppController = Get.find();
 
+  /// Constructs a [HeightInputField] widget.
+  ///
+  /// The [key] parameter is optional and is used for widget identification.
   HeightInputField({super.key});
 
   @override

@@ -5,6 +5,7 @@ import 'package:bmi_app/util/BmiUtil.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// A screen widget for calculating BMI.
 class CalculateScreen extends StatelessWidget {
   final TextEditingController heightController = TextEditingController();
   final TextEditingController weightController = TextEditingController();
@@ -65,6 +66,7 @@ class CalculateScreen extends StatelessWidget {
   }
 }
 
+/// A card widget for displaying BMI information.
 class BMICard extends StatelessWidget {
   final BmiAppController controller = Get.find();
   late final double bmiValue;

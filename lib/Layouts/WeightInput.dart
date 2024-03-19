@@ -3,9 +3,11 @@ import 'package:bmi_app/components/BmiTextInput.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// A widget that represents the weight input field in the BMI app.
 class WeightInputField extends StatelessWidget {
   final BmiAppController bmiAppController = Get.find();
 
+  /// Constructs a [WeightInputField] widget.
   WeightInputField({super.key});
 
   @override

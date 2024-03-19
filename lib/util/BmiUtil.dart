@@ -1,6 +1,16 @@
 import '../common/BmiCategories.dart';
 import 'package:flutter/material.dart';
 
+/// Returns the color corresponding to the given BMI value.
+///
+/// The color is determined based on the following ranges:
+/// - BMI < 16: Returns Colors.red
+/// - 16 <= BMI < 17: Returns Colors.red
+/// - 17 <= BMI < 18.5: Returns Colors.orange
+/// - 18.5 <= BMI < 25: Returns Colors.green
+/// - 25 <= BMI < 30: Returns Colors.orange
+/// - 30 <= BMI < 40: Returns Colors.red
+/// - BMI >= 40: Returns Colors.red
 Color getBMIColor(double bmi) {
   if (bmi < 16) {
     return Colors.red;
@@ -19,6 +29,16 @@ Color getBMIColor(double bmi) {
   }
 }
 
+/// Returns the BMI category corresponding to the given BMI value.
+///
+/// The category is determined based on the following ranges:
+/// - BMI < 16: Returns BMI_CATEGORIES.SEVERE_UNDERNOURISHMENT
+/// - 16 <= BMI < 17: Returns BMI_CATEGORIES.MEDIUM_UNDERNOURISHMENT
+/// - 17 <= BMI < 18.5: Returns BMI_CATEGORIES.SLIGHT_UNDERNOURISHMENT
+/// - 18.5 <= BMI < 25: Returns BMI_CATEGORIES.NORMAL_NUTRITION_STATE
+/// - 25 <= BMI < 30: Returns BMI_CATEGORIES.OVERWEIGHT
+/// - 30 <= BMI < 40: Returns BMI_CATEGORIES.OBESITY
+/// - BMI >= 40: Returns BMI_CATEGORIES.PATHOLOGICAL_OBESITY
 String bmiValueToCategory(double bmi) {
   if (bmi < 16) {
     return BMI_CATECORIES.SEVERE_UNDERNOURISHMENT;

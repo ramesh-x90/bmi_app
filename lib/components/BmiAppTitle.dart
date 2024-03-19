@@ -1,6 +1,7 @@
 import 'package:bmi_app/util/DeviceUnitl.dart';
 import 'package:flutter/material.dart';
 
+/// A card widget that displays the BMI app title along with the user's name.
 Card bmiAppTitle() {
   return Card(
     child: Padding(
