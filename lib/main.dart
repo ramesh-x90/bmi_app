@@ -10,6 +10,7 @@ import 'package:get/get.dart';
 
 void main() => runApp(MyApp());
 
+/// The main application widget.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+/// The BMI calculator widget.
 class BMICalculator extends StatelessWidget {
   final BmiAppController controller = Get.put(BmiAppController());
 
@@ -59,11 +61,3 @@ class BMICalculator extends StatelessWidget {
     );
   }
 }
-
-
-
-// The HomeController class from the previous snippet goes here unchanged.
-
-
-
-
