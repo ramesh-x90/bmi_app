@@ -8,16 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
-Future<String> getBMI() async {
-  return Future.delayed(Duration(seconds: 2), () {
-    return "ABC";
-  });
-}
-
-void test() {
-  getBMI().then((value) => null).catchError((onError) => null);
-}
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
